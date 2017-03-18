@@ -1,0 +1,61 @@
+.\"-
+.\" Copyright © 2000-2015 Rudá Moura <ruda.moura@gmail.com>
+.\"
+.Dd August 27, 2015
+.Dt SHUFFLE 1
+.Os
+.Sh NAME
+.Nm shuffle
+.Nd print a random permutation of the argument list
+.Sh SYNOPSIS
+.Nm
+.Op Fl h
+.Op Fl v
+.Op Fl n
+.Op Fl 1
+.Op Fl e
+.Op Fl p Ar number
+.Op Fl r Ar file
+.Op Ar string ...
+.Sh DESCRIPTION
+.Nm
+prints to the standard output a random permutation of the argument list.
+Knuth algorithm (Fisher-Yates shuffle) is used to guarantee truly random permutations
+and you can use entropy from /dev/random or /dev/urandom.
+.Pp
+The following options are available:
+.Bl -tag -width Ds
+.It Fl h
+Print  help and exit.
+.It Fl v
+Print version and exit.
+.It Fl n
+Do not print the trailing newline character.
+.It Fl 1
+Force output to be one entry per line.
+.It Fl e
+Escape filenames with double quotes.
+.It Fl p
+Create a number of permutations (default to 1).
+.It Fl r
+Read entropy from file (default to /dev/random).
+.El
+.Sh EXAMPLES
+.Bd -literal -offset indent
+shuffle a b c
+b c a
+shuffle -p 2 a b c
+c b a
+b a c
+shuffle -1 a b c d
+c
+b
+d
+a
+playmidi $(shuffle *.mid)
+.Ed
+.Sh HISTORY
+.Nm
+had been written to feed random MIDI files to playmidi utility.
+.Sh BUGS
+None until the date.
