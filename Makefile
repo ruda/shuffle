@@ -22,6 +22,9 @@ shuffle.txt: shuffle.1
 shuffle.html: shuffle.1
 	groff -tman -Thtml shuffle.1 > $@
 
+test: shuffle
+	./test.sh
+
 install: shuffle shuffle.1
 	test -d $(DESTDIR)$(BINDIR) || install -d $(DESTDIR)$(BINDIR)
 	install -m 755 shuffle $(DESTDIR)$(BINDIR)/shuffle
