@@ -39,7 +39,7 @@ tc () {
 }
 
 run_tests () {
-    tc test_version ".*1\.15\.8.*Copyright"
+    tc test_version ".*1\.17\.3.*Copyright"
     tc test_perms "1 2 6 24 120 720 5040"
 }
 

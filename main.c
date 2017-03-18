@@ -1,6 +1,6 @@
 /*
  * Print a random permutation of arguments.
- * Copyright © 2000-2015 Rudá Moura <ruda.moura@gmail.com>
+ * Copyright © 2000-2017 Rudá Moura <ruda.moura@gmail.com>
  */
 
 #include <stdio.h>
@@ -17,8 +17,8 @@ usage(void)
 void
 version(void)
 {
-	printf("shuffle version 1.15.8\n");
-	printf("Copyright (c) 2000-2015 Ruda Moura <ruda.moura@gmail.com>\n");
+	printf("shuffle version 1.17.3\n");
+	printf("Copyright (c) 2000-2017 Ruda Moura <ruda.moura@gmail.com>\n");
 }
 
 void

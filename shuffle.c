@@ -1,6 +1,6 @@
 /*
  * Print a random permutation of arguments.
- * Copyright © 2000-2015 Rudá Moura <ruda.moura@gmail.com>
+ * Copyright © 2000-2017 Rudá Moura <ruda.moura@gmail.com>
  */
 
 #include "shuffle.h"
