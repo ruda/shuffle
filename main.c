@@ -1,10 +1,8 @@
 /*
  * Print a random permutation of arguments.
- * Copyright © 2000-2017 Rudá Moura <ruda.moura@gmail.com>
+ * Copyright © 2000-2018 Rudá Moura <ruda.moura@gmail.com>
  */
 
-#include <stdio.h>
-#include <string.h>
 #include "shuffle.h"
 
 void
@@ -17,31 +15,8 @@ usage(void)
 void
 version(void)
 {
-	printf("shuffle version 1.17.3\n");
-	printf("Copyright (c) 2000-2017 Ruda Moura <ruda.moura@gmail.com>\n");
-}
-
-void
-echo(char *v[], int n, int nflag, int oneflag, int eflag)
-{
-	int i;
-
-	for (i=0; i < n; i++) {
-		if (eflag)
-			fputc('"', stdout);
-		fputs(v[i], stdout);
-		if (eflag)
-			fputc('"', stdout);
-		if (v[i+1]) {
-			if (oneflag) {
-				putchar('\n');
-			} else {
-				putchar(' ');
-			}
-		}
-	}
-	if (!nflag)      
-		putchar('\n');
+	printf("shuffle version 1.18.6\n");
+	printf("Copyright (c) 2000-2018 Ruda Moura <ruda.moura@gmail.com>\n");
 }
 
 int
@@ -68,6 +43,10 @@ main(int argc, char *argv[])
 			oneflag = 1;
 			break;
 		case 'p':
+			if (!isdigit(optarg[0])) {
+				fprintf(stderr, "Number of permutations must be an integer!\n");
+				exit(1);
+			}
 			p = atoi(optarg);
 			break;
 		case 'r':

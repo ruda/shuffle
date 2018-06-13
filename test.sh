@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Print a random permutation of arguments.
-# Copyright © 2000-201y Rudá Moura
+# Copyright © 2000-2018 Rudá Moura <ruda.moura@gmail.com>
 #
 
 # Exit immediately if a test fails
@@ -39,7 +39,7 @@ tc () {
 }
 
 run_tests () {
-    tc test_version ".*1\.17\.3.*Copyright"
+    tc test_version ".*1\.18\.6.*Copyright"
     tc test_perms "1 2 6 24 120 720 5040"
 }
 
@@ -48,5 +48,3 @@ if [ $# == 0 ]; then
 else
     $1
 fi
-
-# vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

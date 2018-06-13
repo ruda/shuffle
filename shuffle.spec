@@ -1,6 +1,6 @@
 Summary: Print a random permutation of the argument list
 Name: shuffle
-Version: 1.17.3
+Version: 1.18.6
 Release: 1%{?dist}
 Group: Applications/System
 License: BSD

@@ -1,14 +1,15 @@
 /*
  * Print a random permutation of arguments.
- * Copyright © 2000-2017 Rudá Moura <ruda.moura@gmail.com>
+ * Copyright © 2000-2018 Rudá Moura <ruda.moura@gmail.com>
  */
 
+#include <assert.h>
+#include <ctype.h>
+#include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 #include <time.h>
-#include <fcntl.h>
-#include <assert.h>
+#include <unistd.h>
 
 #ifndef __SHUFFLE_H
 #define __SHUFFLE_H

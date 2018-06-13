@@ -2,11 +2,11 @@ PREFIX=/usr/local
 BINDIR=$(PREFIX)/bin
 MANDIR=$(PREFIX)/share/man
 
-CFLAGS=-Wall -Werror -pedantic
+CFLAGS=-Wall -Werror -pedantic -pipe
 CFLAGS+=-Os
 #CFLAGS+=-g
 
-OBJS=shuffle.o main.o
+OBJS=shuffle.o main.o echo.o
 
 all: shuffle
 
